@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biodata Keren</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #121826;
+      --muted: #9aa4b2;
+      --text: #e6ebf3;
+      --brand: #6ee7ff;
+      --brand-2: #a78bfa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0b0f17;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    canvas#bg-stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(10, 14, 22, 0.7);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      z-index: 10;
+    }
+
+    header a {
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: var(--brand);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: auto;
+      max-width: 500px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      animation: fadeUp 1s ease forwards;
+      transform: translateY(40px);
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--brand);
+      box-shadow: 0 0 20px rgba(110, 231, 255, 0.4);
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 1rem 0;
+      color: #cfd6e6;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color: #0b0f17;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(111, 231, 255, 0.25);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(167, 139, 250, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="bg-stars"></canvas>
+
+  <!-- Navbar -->
+  <header>
+    <a href="#biodata">Tentang Saya</a>
+    <a href="#growtopia">Growtopia</a>
+  </header>
+
+  <!-- Biodata -->
+  <section id="biodata">
+    <div class="card">
+      <img src="juts.jpeg" alt="Foto Profil">
+      <h1>BanzyGTI</h1>
+      <h2>Web Developer | Gamer | Designer | Always You</h2>
+      <p>
+        Halo! Saya <b>M.Albani Habib Busyron</b>, seorang yang suka belajar untuk bersamamu, coding, dan
+        dunia kreatif. Saya juga hobi bermain game, terutama Growtopia,
+        sambil berbagi pengalaman dengan teman-teman.
+      </p>
+      <div class="socials">
+        <a class="btn" href="Joeds.html" target="_blank">Jual Beli</a>
+        <a class="btn" href="menjet.html" target="_blank">All Sosmed</a>
+        <a class="btn" href="https://github.com/username" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Growtopia -->
+  <section id="growtopia">
+    <h1>Growtopia</h1>
+    <p>
+      Growtopia adalah game MMO sandbox di mana pemain bisa membangun world,
+      melakukan farming, trading, dan bertemu komunitas global.
+    </p>
+    <p>
+      Saya aktif di dunia Growtopia, terutama dalam jual beli <b>WLS, DLS, dan BGLS</b>.
+      Jika kamu butuh partner trading atau sekadar ingin ngobrol soal game ini,
+      jangan ragu untuk menghubungi saya! 🚀
+    </p>
+    <a class="btn" href="https://www.growtopiagame.com" target="_blank">Website Resmi Growtopia</a>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Biodata Keren • Dibuat dengan ❤️
+  </footer>
+
+  <script>
+    // Tahun otomatis
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Animasi background bintang
+    const canvas = document.getElementById("bg-stars");
+    const ctx = canvas.getContext("2d");
+    let stars = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+    createStars(120);
+
+    function animateStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+      requestAnimationFrame(animateStars);
+    }
+    animateStars();
+  </script>
+</body>
+
+</html>
