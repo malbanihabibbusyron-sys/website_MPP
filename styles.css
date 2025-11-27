@@ -1,0 +1,75 @@
+:root{
+  --bg: #0f1724;
+  --card: linear-gradient(180deg,#0b1220 0%, #0e1a2a 100%);
+  --accent: #22c55e;
+  --muted: #9aa4b2;
+  --glass: rgba(255,255,255,0.04);
+  --radius: 14px;
+  --maxw: 720px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:radial-gradient(circle at 10% 10%, #071025 0%, #05101a 40%, #021018 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size:16px;
+}
+
+.card{
+  width:100%;
+  max-width:var(--maxw);
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+.card-header .title{
+  font-size:1.45rem;
+  letter-spacing:0.2px;
+  margin-bottom:6px;
+}
+.subtitle{color:var(--muted);font-size:0.95rem;margin-bottom:14px}
+
+.bio{background:var(--glass);padding:12px;border-radius:10px;color:#d8e6f5;margin-bottom:14px;line-height:1.45}
+
+.contacts{
+  display:flex;
+  gap:10px;
+  flex-direction:column;
+  margin-bottom:12px;
+}
+
+.contact{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:10px;
+  text-decoration:none;
+  color:inherit;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.contact svg{width:20px;height:20px;opacity:0.9;fill:currentColor}
+.contact:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(2,6,23,0.6)}
+
+.contact.wa{color: #e6f7ee; background:linear-gradient(90deg, rgba(34,197,94,0.08), rgba(34,197,94,0.02)); border-color: rgba(34,197,94,0.12)}
+.contact.ig{color:#ffd6e0; background:linear-gradient(90deg, rgba(255,99,132,0.04), rgba(255,210,124,0.02))}
+.contact.fb{color:#d7e8ff; background:linear-gradient(90deg, rgba(59,130,246,0.04), rgba(59,130,246,0.02))}
+
+.note{color:var(--muted);font-size:0.85rem;text-align:left}
+@media (min-width:560px){
+  .contacts{flex-direction:row}
+  .contact{flex:1}
+}
